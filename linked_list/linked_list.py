@@ -13,7 +13,7 @@ from typing import Any
 
 # Create a Node:
 class Node:
-    """ 
+    """
     Class that creates each node
     - data: data that is stored in Node
     - next_node: reference to the next node
@@ -28,7 +28,7 @@ class Node:
 
 # Create a LinkedList:
 class LinkedList:
-    """ 
+    """
     Implementing a Linked Lists
     - nodes: list of predefined values to be treated as Node
     """
@@ -83,6 +83,24 @@ class LinkedList:
                 new_node.next = node
                 return
             prev_node = node
+
+        raise Exception(f"Node with data {target} not found")
+
+
+    def remove(self, target):
+        if self.head is None:
+            raise Exception("LinkedList is empty.")
+
+        if self.head.data == target:
+            self.head = self.head.next
+            return
+
+        previous_node = self.head
+        for node in self:
+            if node.data == target:
+                previous_node.next = node.next
+                return
+            previous_node = node
 
         raise Exception(f"Node with data {target} not found")
 
