@@ -105,20 +105,3 @@ class LinkedList:
         return " -> ".join(nodes)
 
 
-
-
-
-# Drivers:
-node_list = ["b", "c", "d"]
-linked_list = LinkedList(node_list)
-print("Original LinkedList: ", linked_list)
-
-#for node in LinkedList(["a", "b", "c"]):
-#    print(node)
-
-
-linked_list.add_left(Node("a"))
-print("Added left: ", linked_list)
-
-linked_list.add_right(Node("e"))
-print("Added right:", linked_list)
