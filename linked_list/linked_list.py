@@ -1,5 +1,5 @@
 """
-LinkedList implementation in Python 3.10
+Singly Linked List implementation in Python 3.10
 
 Node: (the first node is called: head)
 - data: data it stored in Node

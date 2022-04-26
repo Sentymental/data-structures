@@ -1,5 +1,5 @@
 """
-Creating own LinkedList
+Creating own Singly Linked List
 - add_left
 - add_right
 - add_before
