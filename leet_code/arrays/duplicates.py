@@ -9,15 +9,14 @@ Hashset:
 - Space complexity: O(n)
 """
 
-# Test cases:
-arr = [2,14,18,22,22]
-arr1 = [1,2,3,1]
-arr2 = [1,2,3,4]
-arr3 = [1,1,1,3,3,4,3,2,4,2]
-
-
 # Main function:
 def contains_duplicate(nums: list[int]) -> bool:
+    """ Check if in list are duplicated ints. """
+
+    # Check if list is not empty:
+    if not len(nums):
+        return False
+
     hashset = set()
 
     for i in nums:
@@ -28,7 +27,8 @@ def contains_duplicate(nums: list[int]) -> bool:
 
 
 # Tests:
-assert contains_duplicate(arr) == True
-assert contains_duplicate(arr1) == True
-assert contains_duplicate(arr2) == False
-assert contains_duplicate(arr3) == True
+assert contains_duplicate([2,14,18,22,22]) == True, "Wrong Answer"
+assert contains_duplicate([1,2,3,1]) == True, "Wrong Answer"
+assert contains_duplicate([1,2,3,4]) == False, "Wrong Answer"
+assert contains_duplicate([1,1,1,3,3,4,3,2,4,2]) == True, "Wrong Answer"
+assert contains_duplicate([]) == False, "Wrong Answer"
