@@ -10,7 +10,7 @@ answer in any order.
 def sum_two(nums: list[int], target: int):
     """Sum two numbers from list and reach the target"""
 
-    if not len(nums) or target == 0:
+    if not len(nums):
         return False
 
     hashmap: dict = dict()
